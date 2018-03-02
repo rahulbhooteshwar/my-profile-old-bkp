@@ -4,7 +4,7 @@
         <hr class="my-4 light">
         <div class="row" *ngIf="!loadingPosts && posts.length > 0">
             <div class="col-12 col-md-6" style="margin-bottom:5px" *ngFor="let post of posts">
-                <div class="card" style="padding:15px; height:420px">
+                <div class="card animated" style="padding:15px; height:420px" (mouseenter)="appService.animate($event)">
                     <img class="card-img-top" src="{{post.thumbnail}}" alt="Card image cap" style="height:220px">
                     <div class="card-block" style="height:60px">
                         <h5 class="card-title text-primary">
@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6" style="margin-bottom:5px">
-                <div class="card" style="padding:15px; height:420px">
+                <div class="card animated" style="padding:15px; height:420px" (mouseenter)="appService.animate($event)">
                     <span class="fa fa-4x fa-newspaper-o text-center text-primary" style="font-size:210px"></span>
                     <div class="card-block" style="height:60px; margin-top:25px">
                         <h3 class="card-title text-primary">
@@ -48,7 +48,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-md-12 text-center" style="margin-top:15px">
-                <a class="btn btn-light btn-xl sr-button js-scroll-trigger" href="#career">Career</a>
+                <a class="animated btn btn-light btn-xl sr-button js-scroll-trigger" href="#career" (mouseenter)="appService.animate($event)">Career</a>
             </div>
         </div>
     </div>

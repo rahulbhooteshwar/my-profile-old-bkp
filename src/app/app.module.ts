@@ -13,6 +13,7 @@ import { BlogService } from './profile/blog/blog.service';
 import { HttpClientModule } from '@angular/common/http';
 
 import { SpinnerModule } from 'ngx-busy-loader';
+import { AppService } from './app.service';
 
 @NgModule({
     declarations: [
@@ -29,7 +30,7 @@ import { SpinnerModule } from 'ngx-busy-loader';
         HttpClientModule,
         SpinnerModule
     ],
-    providers: [BlogService],
+    providers: [BlogService, AppService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

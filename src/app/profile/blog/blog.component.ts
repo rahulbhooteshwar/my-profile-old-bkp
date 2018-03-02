@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BlogService } from './blog.service';
 
 import * as _ from 'lodash';
+import { AppService } from '../../app.service';
 declare var $: any;
 
 @Component({
@@ -12,7 +13,7 @@ declare var $: any;
 export class BlogComponent implements OnInit {
     loadingPosts = false;
     posts = [];
-    constructor(public blogService: BlogService) { }
+    constructor(public blogService: BlogService, public appService: AppService) { }
 
     ngOnInit() {
         this.loadingPosts = true;
@@ -28,7 +29,10 @@ export class BlogComponent implements OnInit {
     }
 
     getTrimmedDescription(description) {
+        description = description.replace(/src/g, "title");
+        description = description.replace(/img/g, "span");
         return $(description).text().substr(0, 150) + "...";
     }
+
 
 }
