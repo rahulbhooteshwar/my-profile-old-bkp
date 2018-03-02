@@ -120,4 +120,11 @@ header.masthead h1 {
     header.masthead h1 {
         font-size: 2.5rem;
     }
+    #blog .card-img-top {
+        height:180px !important;
+    }
+}
+
+#blog .card-img-top {
+    height:220px;
 }
