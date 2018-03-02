@@ -1,1 +1,117 @@
-/* You can add global styles to this file, and also import other style files */
+section {
+    min-height: 100vh !important;
+}
+
+.header-icons {
+    display: flex !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 10px;
+}
+
+.header-icons a {
+    background-color: transparent !important;
+    -webkit-text-decoration-skip: objects !important;
+}
+
+.header-icons .icon:active, .header-icons .icon:hover {
+    color: #f05f40 !important;
+    background: #fff !important;
+}
+
+@media only screen and (min-width: 550px) {
+.header-icons .icon {
+    width: 35px !important;
+    height: 35px !important;
+    font-size: 35px !important;
+}
+.intro-summary {
+    font-size: x-large;
+}
+}
+.header-icons .icon {
+    height: 80px !important;
+    width: 80px !important;
+    font-size: 50px !important;
+    padding: 10px !important;
+    border-radius: 50% !important;
+    border: 2px solid #fff !important;
+    transition: all .7s !important;
+    margin: 5px !important;
+}
+
+.down, .header-icons .icon {
+    color: #fff !important;
+    text-align: center !important;
+}
+
+.header-icons .fa {
+    display: inline-block !important;
+    text-rendering: auto !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+header.masthead h1 {
+    font-size: 3rem;
+}
+
+@media (min-width: 1200px) {
+
+    header.masthead h1 {
+        font-size: 6rem;
+    }
+}
+
+.intro-controls {
+    margin : 15px !important;
+}
+
+.intro-controls .btn{
+    margin: 5px !important;
+}
+
+
+.skills i {
+    font-size: 75px;
+}
+
+.skills .group{
+    margin-bottom: 15px !important;
+}
+
+.custom-devicon {
+    height: 100px;
+    width: 150px;
+}
+
+.placeholder {
+    margin:25px;
+}
+
+.padding-regular {
+    padding: 20px !important;
+}
+.margin-regular {
+    margin: 20px !important;
+}
+
+.footer {
+    background: #1a222c;
+    padding: 10px 0;
+    margin-top: 100px;
+    text-align: center;
+    color: #fff;
+}
+
+.card p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+.card {
+    border: 2px solid #f05f40;
+}
+
+.card img {
+    background: url('assets/img/default_image.png') center no-repeat;
+}
