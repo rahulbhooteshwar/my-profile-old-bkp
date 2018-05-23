@@ -1,0 +1,69 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "search.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/tmp": true,
+        "**/build": true,
+        "**/jasmineTest/coverage": true,
+        "**/jasmineTest/result": true,
+        "**/target": true
+    },
+    "files.associations": {
+        "*.js": "javascript",
+        "*.xlf": "html"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/*.js": {
+            "when": "$(basename).ts"
+        },
+        "**/*.js.map": {
+            "when": "$(basename)"
+        }
+    },
+    "files.hotExit": "onExit",
+    "files.defaultLanguage": "typescript",
+    "files.trimTrailingWhitespace": true,
+    "http.proxyStrictSSL": false,
+    "editor.fontSize": 18,
+    "editor.renderWhitespace": "all",
+    "editor.renderIndentGuides": true,
+    "editor.codeLens": false,
+    "editor.autoIndent": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": true,
+    "editor.letterSpacing": 1,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "off",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.sideBar.location": "left",
+    "window.zoomLevel": 1,
+    "tslint.enable": true,
+    "tslint.configFile": "tslint.json",
+    "tslint.run": "onType",
+    "tslint.autoFixOnSave": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "prettier.singleQuote": true,
+    "prettier.printWidth": 100,
+    "explorer.confirmDragAndDrop": false,
+    "vsicons.projectDetection.autoReload": true,
+    "workbench.iconTheme": "vscode-icons",
+    "explorer.confirmDelete": false
+}
+
+
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "f2",                "command": "workbench.action.terminal.toggleTerminal" },
+    { "key": "ctrl+l",                "command": "workbench.action.gotoLine" },
+    { "key": "ctrl+shift+i",           "command": "editor.action.formatDocument",
+                                     "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly" },
+    { "key": "ctrl+i",           "command": "editor.action.formatSelection",
+                                     "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly" }
+]
