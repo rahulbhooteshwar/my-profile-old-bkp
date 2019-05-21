@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+</head>
+
+<body >
+
+  <section style="margin-top:200px" id="integrations" class="center">
+    <ul id="integration-list" class="integration-list">
+
+      <li>
+        <span class="l" style="background-color: #E54D26">
+          <i class="devicon-html5-plain-wordmark white" title="HTML5"></i>
+        </span>
+      </li>
+      <li>
+        <span class="m" style="background-color: #3D8FC6">
+          <i class="devicon-css3-plain-wordmark white" title="CSS3"></i>
+        </span>
+      </li>
+      <li>
+        <span class="m" style="background-color: #59407F">
+          <i class="devicon-bootstrap-plain-wordmark white" title="Bootstrap"></i>
+        </span>
+      </li>
+      <li>
+        <span class="l" style="background-color: #F0DB4F">
+          <i class="devicon-javascript-plain white" title="Javascript"></i>
+        </span>
+      </li>
+      <li>
+        <span class="l" style="background-color: #007ACC">
+          <i class="devicon-typescript-plain white" title="TypeScript"></i>
+        </span>
+      </li>
+      <li>
+        <span class="s" style="background-color: #EC3E1C">
+          <i class="devicon-java-plain-wordmark white" title="Core Java"></i>
+        </span>
+      </li>
+      <li>
+        <span class="l" style="background-color: #DD1B16">
+          <i class="devicon-angularjs-plain white" title="Angular"></i>
+        </span>
+      </li>
+      <li>
+        <span class="s" style="background-color: #61DAFB">
+          <i class="devicon-react-plain white" title="ReactJS"></i>
+        </span>
+      </li>
+      <li>
+        <span class="s" style="background-color: #41B883">
+          <i class="devicon-vuejs-plain white" title="VueJS"></i>
+        </span>
+      </li>
+      <li>
+        <span class="l" style="background-color: #83CD29">
+          <i class="devicon-nodejs-plain-wordmark white" title="nodeJS"></i>
+        </span>
+      </li>
+      <li>
+        <span class="m">
+          <i class="devicon-express-original-wordmark colored" title="expressJS"></i>
+        </span>
+      </li>
+      <li>
+        <span class="m">
+          <i class="devicon-mongodb-plain-wordmark colored" title="MongoDB"></i>
+        </span>
+      </li>
+      <li>
+        <span class="s" style="background-color: #00618A">
+          <i class="devicon-mysql-plain-wordmark white" title="MySQL"></i>
+        </span>
+      </li>
+      <li>
+        <span class="l" style="background-color: #EB4A4B">
+          <i class="devicon-gulp-plain white" title="Gulp"></i>
+        </span>
+      </li>
+      <li>
+        <span class="m" style="background-color: #1C78C0">
+          <i class="devicon-webpack-plain white" title="Webpack"></i>
+        </span>
+      </li>
+      <li>
+        <span class="l">
+          <i class="devicon-git-plain-wordmark colored" title="Git"></i>
+        </span>
+      </li>
+      <li>
+        <span class="m" style="background-color: #E24329">
+          <i class="devicon-gitlab-plain-wordmark white" title="GitLab"></i>
+        </span>
+      </li>
+      <li>
+        <span class="l" style="background-color: #181616">
+          <i class="devicon-github-plain-wordmark white" title="GitHub"></i>
+        </span>
+      </li>
+      <li>
+        <span class="l" style="background-color: #205081">
+          <i class="devicon-bitbucket-plain-wordmark white" title="BitBucket"></i>
+        </span>
+      </li>
+      <li>
+        <span class="m">
+          <img src="img/bamboo.png" alt="Bamboo" title="Bamboo">
+        </span>
+      </li>
+      <li>
+        <span class="m">
+          <img src="img/jenkins.png" alt="Jenkins" title="Jenkins">
+        </span>
+      </li>
+
+      <li>
+        <span class="m">
+            <img src="img/pcf.png" alt="PCF" title="PCF">
+        </span>
+      </li>
+      <li>
+        <span class="m">
+          <i class="devicon-ubuntu-plain-wordmark colored" title="Ubuntu"></i>
+        </span>
+      </li>
+      <li>
+        <span class="m">
+          <i class="devicon-nginx-original-wordmark colored" title="NGINX"></i></span>
+      </li>
+      <li>
+        <span class="m" style="background-color: #F7A80D">
+          <i class="devicon-amazonwebservices-plain-wordmark white" title="AWS"></i>
+        </span>
+      </li>
+      <li>
+        <span class="m" style="background-color: #303284">
+          <i class="devicon-apache-plain-wordmark white" title="Apache2"></i>
+        </span>
+      </li>
+    </ul>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      window.flow = function () {
+        var sizes = ["s", "m", "l"],
+          iconLWidth = 256,
+          container = document.getElementById("integration-list"),
+          icons = document.querySelectorAll("#integration-list span"),
+          resizeTimer,
+          w, h;
+        // debounce the re-init so it doesn't totally freak out while draging
+        window.addEventListener('resize', resizeDebounce);
+        function resizeDebounce() {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(init, 100);
+        }
+        function init() {
+          w = container.offsetWidth;
+          h = container.offsetHeight;
+          icons.forEach(function (icon, i) {
+            var size = sizes[Math.ceil(Math.random() * 3) - 1];
+            TweenMax.set(
+              icon, {
+                // attr: { class: size},
+                y: R(50, h - 150),
+                x: R(w, w + 50)
+              }
+            );
+            animate(icon, i);
+          });
+        }
+        // animate x and y values at different rates
+        function animate(element, i) {
+          TweenMax.to(
+            element,
+            R(110, 120),
+            {
+              x: -500,
+              ease: Linear.easeNone,
+              repeat: -1,
+              delay: -115 / icons.length * i
+            }
+          );
+          TweenMax.to(
+            element,
+            R(3, 25),
+            {
+              y: '+=300',
+              repeat: -1,
+              yoyo: true,
+              ease: Sine.easeInOut,
+              delay: R(-25, -3)
+            }
+          );
+        };
+        function R(min, max) {
+          return min + Math.random() * (max - min)
+        };
+        return {
+          init: init
+        }
+      }().init();
+    });
+
+  </script>
+</body>
+
+</html>
