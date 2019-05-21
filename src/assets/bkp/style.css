@@ -1,0 +1,98 @@
+body{
+  overflow-x: hidden;
+}
+.text-icon {
+  color: white;
+  font-family: fantasy;
+  margin-top: 35px;
+}
+.white {
+  color:white;
+}
+
+#integrations {
+  padding-top: 20px;
+  padding-bottom: 4px;
+}
+
+section.center {
+  text-align: center;
+}
+
+section {
+  line-height: 1.75em;
+  position: relative;
+  display: block;
+}
+
+#integrations .content {
+  max-width: 894px;
+}
+
+@media (min-width: 1220px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.integration-list li {
+  list-style: none;
+  position: absolute;
+}
+
+.integration-list span {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, .1);
+  opacity:0.85;
+}
+
+.integration-list img {
+  width: 90px;
+  height: auto;
+  margin-top: 10px;
+  opacity:0.85;
+}
+
+
+
+.integration-list span.l {
+  width: 100px;
+  height: 100px;
+  padding: 30px;
+  font-size: 100px;
+}
+
+.integration-list span.m {
+  width: 80px;
+  height: 80px;
+  padding: 24px;
+  font-size: 80px;
+}
+
+.integration-list span.s {
+  width: 70px;
+  height: 70px;
+  padding: 21px;
+  font-size: 70px;
+}
