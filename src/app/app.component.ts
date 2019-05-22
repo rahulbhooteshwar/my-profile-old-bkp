@@ -4,16 +4,18 @@ declare var $: any;
 declare var fullpage: any;
 
 @Component({
-    selector: 'rb-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+  selector: 'rb-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
-    ngAfterViewInit() {
-// tslint:disable-next-line: no-unused-expression
+  ngAfterViewInit() {
+    // tslint:disable-next-line: no-unused-expression
+    if ($(window).width() > 1023) {
       new fullpage('#fullpage', {
         scrollingSpeed: 800,
         scrollBar: true
       });
     }
+  }
 }
