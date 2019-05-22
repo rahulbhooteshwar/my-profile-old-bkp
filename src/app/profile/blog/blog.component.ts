@@ -8,7 +8,7 @@ declare var $: any;
 @Component({
     selector: 'rb-blog',
     templateUrl: './blog.component.html',
-    styles: []
+    styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
     loadingPosts = false;

@@ -1,0 +1,115 @@
+section {
+  padding: 3rem 0;
+  height: 100vh;
+}
+#skills {
+  ::ng-deep {
+    .text-icon {
+      color: white;
+      font-family: fantasy;
+      margin-top: 35px;
+    }
+    .white {
+      color: white;
+    }
+
+    #integrations {
+      padding-top: 20px;
+      padding-bottom: 4px;
+    }
+
+    section.center {
+      text-align: center;
+    }
+
+    section {
+      line-height: 1.75em;
+      position: relative;
+      display: block;
+    }
+
+    #integrations .content {
+      max-width: 894px;
+    }
+
+    @media (min-width: 1220px) {
+      .container {
+        width: 1170px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .container {
+        width: 970px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        width: 750px;
+      }
+    }
+
+    .container {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .integration-list li {
+      list-style: none;
+      position: absolute;
+    }
+
+    .integration-list span {
+      position: absolute;
+      border-radius: 50%;
+      background-color: white;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+      opacity: 0.85;
+    }
+
+    .integration-list {
+      .m {
+        img {
+          width: 75px;
+        }
+      }
+      .l {
+        img {
+          width: 90px;
+        }
+      }
+      .s {
+        img {
+          width: 52px;
+        }
+      }
+      height: auto;
+      margin-top: 10px;
+      opacity: 0.85;
+    }
+
+    .integration-list span.l {
+      width: 130px;
+      height: 130px;
+      padding: 22px;
+      font-size: 85px;
+    }
+
+    .integration-list span.m {
+      width: 100px;
+      height: 100px;
+      padding: 12px;
+      font-size: 70px;
+    }
+
+    .integration-list span.s {
+      width: 70px;
+      height: 70px;
+      padding: 10px;
+      font-size: 45px;
+    }
+  }
+}

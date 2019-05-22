@@ -4,9 +4,9 @@
         <hr class="my-4 light">
         <div class="row" *ngIf="!loadingPosts && posts.length > 0">
             <div class="col-12 col-md-6" style="margin-bottom:5px" *ngFor="let post of posts">
-                <div class="card animated" style="padding:15px; height:420px" (mouseenter)="appService.animate($event)">
+                <div class="card animated" style="padding:15px;" (mouseenter)="appService.animate($event)">
                     <img class="card-img-top" src="{{post.thumbnail}}" alt="Card image cap">
-                    <div class="card-block" style="height:60px">
+                    <!-- <div class="card-block" style="height:60px">
                         <h5 class="card-title text-primary">
                             <strong>{{post.title}}</strong>
                         </h5>
@@ -16,13 +16,13 @@
                                 <a href="{{post.link}}" target="blank">Read More</a>
                             </span>
                         </p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-12 col-md-6" style="margin-bottom:5px">
-                <div class="card animated" style="padding:15px; height:420px" (mouseenter)="appService.animate($event)">
-                    <span class="fa fa-4x fa-newspaper-o text-center text-primary" style="font-size:210px"></span>
-                    <div class="card-block" style="height:60px; margin-top:25px">
+                <div class="card animated" (mouseenter)="appService.animate($event)">
+                    <span class="fa fa-4x fa-newspaper-o text-center text-primary" style="font-size:205px"></span>
+                    <div class="card-block">
                         <h3 class="card-title text-primary">
                             <strong>
                                 <a href="https://medium.com/learnwithrahul" target="blank">
@@ -37,18 +37,13 @@
         </div>
         <div class="row" *ngIf="loadingPosts">
             <div class="col-12 text-center">
-                <ngx-spinner-lines-vertical [size]="'md'" [color]="'#f05f40'"></ngx-spinner-lines-vertical>
+              <!-- show spinner here -->
             </div>
         </div>
         <div class="row" *ngIf="!loadingPosts && posts.length === 0">
             <div class="col-12 text-center text-primary">
                 <span class="fa fa-4x fa-newspaper-o text-center text-primary" style="font-size:210px"></span>
                 <h3> No Recent Posts Available </h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-12 text-center" style="margin-top:15px">
-                <a class="animated btn btn-light btn-xl  js-scroll-trigger" href="#career" (mouseenter)="appService.animate($event)">Career</a>
             </div>
         </div>
     </div>

@@ -12,7 +12,6 @@ import { FooterComponent } from './footer/footer.component';
 import { BlogService } from './profile/blog/blog.service';
 import { HttpClientModule } from '@angular/common/http';
 
-import { SpinnerModule } from 'ngx-busy-loader';
 import { AppService } from './app.service';
 
 @NgModule({
@@ -27,8 +26,7 @@ import { AppService } from './app.service';
     ],
     imports: [
         BrowserModule,
-        HttpClientModule,
-        SpinnerModule
+        HttpClientModule
     ],
     providers: [BlogService, AppService],
     bootstrap: [AppComponent]
