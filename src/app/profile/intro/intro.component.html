@@ -47,15 +47,20 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6 col-lg-7">
+    <div class="col-md-6 col-lg-7 no-padding no-margin">
       <div class="terminal" title="Believe me, It's not a GIF Image">
         <div class=fakeMenu>
-          <div class="fakeButtons fakeClose"></div>
-          <div class="fakeButtons fakeMinimize"></div>
-          <div class="fakeButtons fakeZoom"></div>
+          <div class="float-left">
+            <div class="fakeButtons fakeClose"></div>
+            <div class="fakeButtons fakeMinimize"></div>
+            <div class="fakeButtons fakeZoom"></div>
+          </div>
           <div class="fakeTitle">🏠 Geeks-PC -- bash -- 80X24</div>
         </div>
-        <div class="fakeScreen">
+        <div class="fakeScreen fp-scrollable">
+          <span class="float-right">
+            <i *ngIf="typed" (click)="typed.reset()" title="Refresh" class="fa fa-refresh"></i>
+          </span>
           <p class="typed"></p>
         </div>
       </div>

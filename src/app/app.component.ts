@@ -14,6 +14,8 @@ export class AppComponent implements AfterViewInit {
     if ($(window).width() > 1023) {
       new fullpage('#fullpage', {
         scrollingSpeed: 800,
+        scrollOverflow: true,
+        allowScrolling: true,
         scrollBar: true
       });
     }

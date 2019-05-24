@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ChangeDetectorRef, AfterViewChecked } from '@angular/core';
 import { AppService } from '../../app.service';
 
 declare var $: any;
@@ -9,12 +9,17 @@ declare var Typed: any;
   templateUrl: './intro.component.html',
   styleUrls: ['./intro.component.scss']
 })
-export class IntroComponent implements OnInit, AfterViewInit {
-
-  constructor(public appService: AppService) { }
+export class IntroComponent implements OnInit, AfterViewInit, AfterViewChecked {
+  typed;
+  constructor(public appService: AppService, private cdRef: ChangeDetectorRef) { }
 
   ngOnInit() {
   }
+
+  ngAfterViewChecked() {
+    this.cdRef.detectChanges();
+  }
+
   ngAfterViewInit() {
     function scroll() {
       const realHeight = $('.fakeScreen')[0].scrollHeight;
@@ -37,7 +42,7 @@ export class IntroComponent implements OnInit, AfterViewInit {
       'Cloud/Servers': ['AWS', 'Apache2', 'Nginx', 'Ubuntu', 'PCF']
     };
     // tslint:disable-next-line: no-unused-expression
-    new Typed('.typed', {
+    this.typed = new Typed('.typed', {
       strings: [
         `
         \`<span class='command-pre'>Geeks-PC:~ Rahul$</span>\`
@@ -63,12 +68,12 @@ export class IntroComponent implements OnInit, AfterViewInit {
         \`<br/><span class='command-pre'>Geeks-PC:~ Rahul$</span>\`
         `
       ],
-      typeSpeed: 50,
-      fadeOut: true,
-      fadeOutDelay: 1000,
-      loop: true,
+      typeSpeed: 40,
+      // fadeOut: true,
+      // fadeOutDelay: 5000,
+      loop: false,
       onStringTyped: () => {
-        scroll();
+        // scroll();
       }
     });
   }
