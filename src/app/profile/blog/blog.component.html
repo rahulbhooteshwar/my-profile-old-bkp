@@ -5,7 +5,9 @@
         <div class="row" *ngIf="!loadingPosts && posts.length > 0">
             <div class="col-12 col-md-6" style="margin-bottom:5px" *ngFor="let post of posts">
                 <div class="card animated" style="padding:15px;" (mouseenter)="appService.animate($event)">
+                  <a href="{{post.link}}" target="blank">
                     <img class="card-img-top" src="{{post.thumbnail}}" alt="Card image cap">
+                  </a>
                     <!-- <div class="card-block" style="height:60px">
                         <h5 class="card-title text-primary">
                             <strong>{{post.title}}</strong>
