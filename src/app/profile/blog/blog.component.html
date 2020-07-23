@@ -1,7 +1,7 @@
 <section id="blog" class="bg-light text-white">
     <div class="container text-center">
-        <h2 class="mb-4">My Recent Posts</h2>
-        <hr class="my-4 light">
+        <h2 class="mb-4 text-primary">My Recent Posts</h2>
+        <hr class="my-4 primary">
         <div class="row" *ngIf="!loadingPosts && posts.length > 0">
             <div class="col-12 col-md-6" style="margin-bottom:5px" *ngFor="let post of posts">
                 <div class="card animated" style="padding:15px;" (mouseenter)="appService.animate($event)">
