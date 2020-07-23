@@ -13,6 +13,7 @@ import { BlogService } from './profile/blog/blog.service';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppService } from './app.service';
+import { ContributionsComponent } from './profile/contributions/contributions.component';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import { AppService } from './app.service';
         FavoritesComponent,
         CareerComponent,
         BlogComponent,
-        FooterComponent
+        FooterComponent,
+        ContributionsComponent
     ],
     imports: [
         BrowserModule,
