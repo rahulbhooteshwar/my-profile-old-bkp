@@ -1,23 +1,10 @@
-import { Component, AfterViewInit } from '@angular/core';
-declare var jquery: any;
-declare var $: any;
-declare var fullpage: any;
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'rb-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
-  ngAfterViewInit() {
-    // tslint:disable-next-line: no-unused-expression
-    if ($(window).width() > 1023) {
-      new fullpage('#fullpage', {
-        scrollingSpeed: 800,
-        scrollOverflow: true,
-        allowScrolling: true,
-        scrollBar: true
-      });
-    }
-  }
+export class AppComponent {
 }

@@ -16,7 +16,7 @@ section {
 
 .header-icons .icon:active,
 .header-icons .icon:hover {
-  color: #679DFF !important;
+  color: #679dff !important;
   background: #fff !important;
 }
 
@@ -76,13 +76,10 @@ header.masthead h1 {
   font-size: 75px;
 }
 
-.skills .group {
-  margin-bottom: 15px !important;
-}
 
 .custom-devicon {
-  height: 100px;
-  width: 150px;
+  height: 80px;
+  width: 80px;
 }
 
 .placeholder {
@@ -109,11 +106,11 @@ header.masthead h1 {
   text-justify: inter-word;
 }
 .card {
-  border: 2px solid  #679DFF;
+  border: 2px solid #679dff;
 }
 
 .card img {
-  background: url('assets/img/default_image.png') center no-repeat;
+  background: url("assets/img/default_image.png") center no-repeat;
 }
 
 @media only screen and (max-width: 500px) {
@@ -166,30 +163,33 @@ body::-webkit-scrollbar-button {
 // customize colors
 
 .btn-primary {
-  background-color: #679DFF;
-  border-color: #679DFF;
+  background-color: #679dff;
+  border-color: #679dff;
 }
-.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  color: #fff !important;
-  background-color: #185698 !important;
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover {
+  color:  #679dff !important;
+  background-color:  #fff !important;
 }
 a {
-  color: #679DFF;
+  color: #679dff;
 }
 a:hover {
   color: #185698 !important;
 }
-.btn-primary:active, .btn-primary:focus {
-  box-shadow: 0 0 0 .2rem #679DFF!important;
+.btn-primary:active,
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem #679dff !important;
 }
 .text-primary {
-  color: #679DFF!important;
+  color: #679dff !important;
 }
 .bg-primary {
-  background-color: #679DFF!important;
+  background-color: #679dff !important;
 }
 hr {
   max-width: 50px;
   border-width: 3px;
-  border-color: #679DFF;
+  border-color: #679dff;
 }
