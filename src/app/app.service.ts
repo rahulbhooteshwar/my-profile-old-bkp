@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-declare var ga;
+declare var gtag;
 @Injectable()
 export class AppService {
 
@@ -12,12 +12,10 @@ export class AppService {
             event.target.classList.remove('pulse');
         }, 1000);
     }
-    emitAnalyticsEvent(eventObject) {
-        ga('send', {
-            hitType: 'event',
-            eventCategory: 'link',
-            eventAction: 'click',
-            ...eventObject
+    emitAnalyticsEvent(data) {
+        gtag('event', 'click', {
+            event_category: data.eventCategory ? data.eventCategory : 'General',
+            event_label: data.eventLabel
         });
     }
 
