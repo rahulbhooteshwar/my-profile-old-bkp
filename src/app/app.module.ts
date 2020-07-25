@@ -9,7 +9,6 @@ import { FavoritesComponent } from './profile/favorites/favorites.component';
 import { CareerComponent } from './profile/career/career.component';
 import { BlogComponent } from './profile/blog/blog.component';
 import { FooterComponent } from './footer/footer.component';
-import { BlogService } from './profile/blog/blog.service';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppService } from './app.service';
@@ -30,7 +29,7 @@ import { ContributionsComponent } from './profile/contributions/contributions.co
         BrowserModule,
         HttpClientModule
     ],
-    providers: [BlogService, AppService],
+    providers: [AppService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

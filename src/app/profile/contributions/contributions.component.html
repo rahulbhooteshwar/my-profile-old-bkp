@@ -4,7 +4,7 @@
     <hr class="my-2 light mb-4">
     <div class="row">
       <div class="col-12 col-md-3">
-        <a targe="_blank" href="https://www.covid19india.org/">
+        <a (click)='appService.emitAnalyticsEvent({eventCategory: "Contribution",eventLabel: "Covid 19 India Site"})' targe="_blank" href="https://www.covid19india.org/">
           <div class="card animated bg-light" (mouseenter)="appService.animate($event)"
             style="width:100%; height: 100%">
             <div class="card-body">
@@ -16,10 +16,10 @@
                 Tracker for Corona Virus outbreak in India. Front end built using React with 100% use of react hooks.
               </div>
               <div class="card-cta-group">
-                <a target="_blank"
+                <a (click)='appService.emitAnalyticsEvent({eventCategory: "Contribution",eventLabel: "Covid 19 India Feature"})' target="_blank"
                   href="https://github.com/covid19india/covid19india-react/issues?q=is%3Aissue+is%3Aclosed+author%3Arahulbhooteshwar"
                   class="btn btn-primary m-2 pl-3 pr-3">Feature</a>
-                <a target="_blank" href="https://github.com/covid19india/covid19india-react/pulls?q=is%3Apr+author%3Arahulbhooteshwar+is%3Aclosed"
+                <a (click)='appService.emitAnalyticsEvent({eventCategory: "Contribution",eventLabel: "Covid 19 India Contribution"})' target="_blank" href="https://github.com/covid19india/covid19india-react/pulls?q=is%3Apr+author%3Arahulbhooteshwar+is%3Aclosed"
                   class="btn btn-dark m-2 pl-3 pr-3">My Contribution</a>
               </div>
             </div>
@@ -27,7 +27,7 @@
         </a>
       </div>
       <div class="col-12 col-md-3">
-        <a targe="_blank" href="https://angular.io/">
+        <a (click)='appService.emitAnalyticsEvent({eventCategory: "Contribution",eventLabel: "Angular Site"})' targe="_blank" href="https://angular.io/">
           <div class="card animated bg-light" (mouseenter)="appService.animate($event)"
             style="width:100%; height: 100%">
             <div class="card-body">
@@ -40,10 +40,10 @@
                 TypeScript.
               </div>
               <div class="card-cta-group">
-                <a target="_blank"
+                <a (click)='appService.emitAnalyticsEvent({eventCategory: "Contribution",eventLabel: "Angular Feature"})' target="_blank"
                   href="https://github.com/angular/angular-cli/issues?q=is%3Aissue+is%3Aclosed+author%3Arahulbhooteshwar"
                   class="btn btn-primary m-2 pl-3 pr-3">Feature</a>
-                <a target="_blank"
+                <a (click)='appService.emitAnalyticsEvent({eventCategory: "Contribution",eventLabel: "Angular Contribution"})' target="_blank"
                   href="https://github.com/angular/angular-cli/pulls?q=is%3Apr+is%3Aclosed+author%3Arahulbhooteshwar"
                   class="btn btn-dark m-2 pl-3 pr-3">My Contribution</a>
               </div>
@@ -52,7 +52,7 @@
         </a>
       </div>
       <div class="col-12 col-md-3">
-        <a targe="_blank" href="https://formik.org/">
+        <a (click)='appService.emitAnalyticsEvent({eventCategory: "Contribution",eventLabel: "Formik Site"})' targe="_blank" href="https://formik.org/">
           <div class="card animated bg-light" (mouseenter)="appService.animate($event)"
             style="width:100%; height: 100%">
             <div class="card-body">
@@ -62,8 +62,8 @@
                 Formik is the world's most popular open source form library for React and React Native.
               </div>
               <div class="card-cta-group">
-                <a target="_blank" href="https://github.com/formium/formik/issues?q=is%3Aissue+is%3Aclosed+author%3Arahulbhooteshwar" class="btn btn-primary m-2 pl-3 pr-3">Reported Issues</a>
-                <a target="_blank" href="https://github.com/formium/formik/pulls?q=is%3Apr+author%3Arahulbhooteshwar+is%3Aclosed" class="btn btn-dark m-2 pl-3 pr-3">My Contribution</a>
+                <a (click)='appService.emitAnalyticsEvent({eventCategory: "Contribution",eventLabel: "Formik Issues"})' target="_blank" href="https://github.com/formium/formik/issues?q=is%3Aissue+is%3Aclosed+author%3Arahulbhooteshwar" class="btn btn-primary m-2 pl-3 pr-3">Reported Issues</a>
+                <a (click)='appService.emitAnalyticsEvent({eventCategory: "Contribution",eventLabel: "Formik Contribution"})' target="_blank" href="https://github.com/formium/formik/pulls?q=is%3Apr+author%3Arahulbhooteshwar+is%3Aclosed" class="btn btn-dark m-2 pl-3 pr-3">My Contribution</a>
               </div>
             </div>
           </div>
@@ -78,7 +78,7 @@
               Formik is the world's most popular open source form library for React and React Native.
             </div>
             <div class="card-cta-group">
-              <a target="_blank" href="https://stackoverflow.com/users/4517595/rahul-bhooteshwar?tab=summary"
+              <a (click)='appService.emitAnalyticsEvent({eventCategory: "Contribution",eventLabel: "Stack Overflow Activities"})' target="_blank" href="https://stackoverflow.com/users/4517595/rahul-bhooteshwar?tab=summary"
                 class="btn btn-dark m-2 pl-3 pr-3">Activities</a>
             </div>
           </div>
@@ -87,7 +87,7 @@
     </div>
     <div class="row mt-3">
       <div class="col-12 col-md-3 offset-md-3">
-        <a targe="_blank" href="https://www.npmjs.com/package/snippet-highlight">
+        <a (click)='appService.emitAnalyticsEvent({eventCategory: "Contribution",eventLabel: "Snippet Heighlight"})' targe="_blank" href="https://www.npmjs.com/package/snippet-highlight">
           <div class="card animated bg-light" (mouseenter)="appService.animate($event)"
             style="width: 100%; height: 100%">
             <div class="card-body">
@@ -103,7 +103,7 @@
         </a>
       </div>
       <div class="col-12 col-md-3">
-        <a targe="_blank" href="https://www.npmjs.com/package/ngx-busy-loader">
+        <a (click)='appService.emitAnalyticsEvent({eventCategory: "Contribution",eventLabel: "NGX Busy Loader"})' targe="_blank" href="https://www.npmjs.com/package/ngx-busy-loader">
           <div class="card animated bg-light" (mouseenter)="appService.animate($event)"
             style="width: 100%; height: 100%">
             <div class="card-body">

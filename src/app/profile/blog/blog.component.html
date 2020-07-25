@@ -1,41 +1,30 @@
-<section id="blog" class="bg-light text-white">
-    <div class="container text-center">
+<section id="blog" class="bg-light text-primary">
+    <div class="container-fluid text-center p-5">
         <h2 class="mb-4 text-primary">My Recent Posts</h2>
         <hr class="my-4 primary">
-        <div class="row" *ngIf="!loadingPosts && posts.length > 0">
-            <div class="col-12 col-md-6" style="margin-bottom:5px" *ngFor="let post of posts">
-                <div class="card animated" style="padding:15px;" (mouseenter)="appService.animate($event)">
-                  <a href="{{post.link}}" target="blank">
-                    <img class="card-img-top" src="{{post.thumbnail}}" alt="Card image cap">
-                  </a>
-                </div>
-            </div>
-            <div class="col-12 col-md-6" style="margin-bottom:5px">
-                <div class="card animated" (mouseenter)="appService.animate($event)">
-                    <span class="fa fa-4x fa-newspaper-o text-center text-primary" style="font-size:205px"></span>
-                    <div class="card-block">
-                        <h3 class="card-title text-primary">
-                            <strong>
-                                <a href="https://medium.com/learnwithrahul" target="blank">
-                                    <span class="fa fa-arrow-circle-o-right"></span>
-                                    Explore All Posts
-                                </a>
-                            </strong>
-                        </h3>
+        <div class="row" *ngIf="posts.length > 0">
+            <div class="col-12 col-md-3" style="margin-bottom:5px" *ngFor="let post of posts">
+                <a (click)='appService.emitAnalyticsEvent({eventCategory: "blog",eventLabel: post.title})'
+                    href="{{post.link}}" target="blank">
+                    <div class="card animated" style="padding:15px; height:100%"
+                        (mouseenter)="appService.animate($event)">
+                        <img class="card-img-top" src="{{post.thumbnail}}" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="card-title text-primary">
+                                {{post.title}}
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
-        <div class="row" *ngIf="loadingPosts">
-            <div class="col-12 text-center">
-              <!-- show spinner here -->
-            </div>
-        </div>
-        <div class="row" *ngIf="!loadingPosts && posts.length === 0">
-            <div class="col-12 text-center text-primary">
-                <span class="fa fa-4x fa-newspaper-o text-center text-primary" style="font-size:210px"></span>
-                <h3> No Recent Posts Available </h3>
-            </div>
+        <div class="col-12 col-md-4 text-center offset-md-4 mt-4" style="margin-bottom:5px">
+            <a class="animated btn btn-primary btn-xl" (mouseenter)="appService.animate($event)"
+                (click)='appService.emitAnalyticsEvent({eventCategory: "All Blogs",eventLabel: "Explore All Blogs"})'
+                href="https://medium.com/learnwithrahul" target="blank">
+                <span class="fa fa-arrow-circle-o-right"></span>
+                Explore All Posts
+            </a>
         </div>
     </div>
 </section>

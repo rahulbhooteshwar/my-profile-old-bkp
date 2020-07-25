@@ -22,23 +22,23 @@
             </strong>
           </p>
           <div class="header-icons">
-            <a aria-label="Send email" href="mailto:rahul.bhooteshwar@gmail.com">
+            <a (click)='appService.emitAnalyticsEvent({"eventCategory": "Intro","eventLabel": "Send Email"})' aria-label="Send email" href="mailto:rahul.bhooteshwar@gmail.com">
               <i class="icon fa fa-envelope"></i>
             </a>
-            <a aria-label="My Linkedin" target="_blank" href="https://www.linkedin.com/in/rahul-bhooteshwar-29600179/">
+            <a (click)='appService.emitAnalyticsEvent({"eventCategory": "Intro","eventLabel": "Visit Linked In"})' aria-label="My Linkedin" target="_blank" href="https://www.linkedin.com/in/rahul-bhooteshwar-29600179/">
               <i class="icon fa fa-linkedin" aria-hidden="true"></i>
             </a>
-            <a aria-label="My Medium" target="_blank" href="https://medium.com/@rahul.bhooteshwar">
+            <a (click)='appService.emitAnalyticsEvent({"eventCategory": "Intro","eventLabel": "Visit Medium"})' aria-label="My Medium" target="_blank" href="https://medium.com/@rahul.bhooteshwar">
               <i class="icon fa fa-medium" aria-hidden="true"></i>
             </a>
-            <a aria-label="My Github" target="_blank" href="https://github.com/rahulbhooteshwar">
+            <a (click)='appService.emitAnalyticsEvent({"eventCategory": "Intro","eventLabel": "Visit Github"})' aria-label="My Github" target="_blank" href="https://github.com/rahulbhooteshwar">
               <i class="icon fa fa-github-alt" aria-hidden="true"></i>
             </a>
           </div>
         </div>
         <div class="col-lg-12">
           <div class="intro-controls">
-            <a class="animated btn btn-primary btn-xl" target="blank" href="/assets/Rahul_Bhooteshwar_Resume.pdf"
+            <a (click)='appService.emitAnalyticsEvent({"eventCategory": "Intro","eventLabel": "View Resume"})' class="animated btn btn-primary btn-xl" target="blank" href="/assets/Rahul_Bhooteshwar_Resume.pdf"
               (mouseenter)="appService.animate($event)">
               <i class="fa fa-eye" aria-hidden="true"></i>
               View Resume
